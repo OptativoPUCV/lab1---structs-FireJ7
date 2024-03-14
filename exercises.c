@@ -9,15 +9,16 @@ Ejercicio 1: Encuentra el Elemento Mayor
 Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y devuelva el valor más grande del arreglo.
 */
-int findMax(int arr[], int size)
+int findMax(int arr[], int talla)
 {  
     int max = arr[0];
-    for (int i = 1, i < size, i++)
+    for (int i = 0, i < talla, i++)
       {
         if (arr[i] > max)
-        
+      {
+        max = arr[i];
       }
-      return max;
+      return 0;
 }
 
 /*

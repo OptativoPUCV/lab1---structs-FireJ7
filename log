@@ -51,3 +51,35 @@ exercises.c:21:1: error: control reaches end of non-void function [-Werror=retur
 cc1: all warnings being treated as errors
 Compilation failed
 dbf7911
+Thu 14 Mar 2024 08:39:12 PM UTC: 
+ exercises.c | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘findMax’:
+exercises.c:15:23: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+   15 |     for (int i = 0, i < talla, i++)
+      |                       ^
+exercises.c:29:1: error: expected expression before ‘void’
+   29 | void reverseArray(int arr[], int size) {}
+      | ^~~~
+exercises.c:71:1: error: expected expression before ‘typedef’
+   71 | typedef struct {
+      | ^~~~~~~
+exercises.c:15:14: error: unused variable ‘i’ [-Werror=unused-variable]
+   15 |     for (int i = 0, i < talla, i++)
+      |              ^
+exercises.c:15:5: note: ‘-Wmisleading-indentation’ is disabled from this point onwards, since column-tracking was disabled due to the size of the code/headers
+   15 |     for (int i = 0, i < talla, i++)
+      |     ^~~
+exercises.c:15:5: note: adding ‘-flarge-source-files’ will allow for more column-tracking support, at the expense of compilation time and memory
+test.c:410:1: error: expected declaration or statement at end of input
+  410 | }
+      | ^
+In file included from test.c:1:
+exercises.c:14:9: error: unused variable ‘max’ [-Werror=unused-variable]
+   14 |     int max = arr[0];
+      |         ^~~
+test.c:411: error: control reaches end of non-void function [-Werror=return-type]
+cc1: all warnings being treated as errors
+Compilation failed
+4abd607
