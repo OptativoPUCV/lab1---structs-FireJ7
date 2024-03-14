@@ -24,3 +24,30 @@ Thu 14 Mar 2024 08:23:13 PM UTC:
  tests:  0|7
 total_score: 0/70
 a524ea8
+Thu 14 Mar 2024 08:33:37 PM UTC: 
+ exercises.c | 11 ++++++++++-
+ 1 file changed, 10 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘findMax’:
+exercises.c:15:23: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘<’ token
+   15 |     for (int i = 1, i < size, i++)
+      |                       ^
+exercises.c:20:7: error: expected expression before ‘return’
+   20 |       return max;
+      |       ^~~~~~
+exercises.c:21:1: error: expected expression before ‘}’ token
+   21 | }
+      | ^
+exercises.c:21:1: error: expected expression before ‘}’ token
+exercises.c:15:14: error: unused variable ‘i’ [-Werror=unused-variable]
+   15 |     for (int i = 1, i < size, i++)
+      |              ^
+exercises.c:14:9: error: unused variable ‘max’ [-Werror=unused-variable]
+   14 |     int max = arr[0];
+      |         ^~~
+exercises.c:21:1: error: control reaches end of non-void function [-Werror=return-type]
+   21 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+dbf7911
