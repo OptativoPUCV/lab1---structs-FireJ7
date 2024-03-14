@@ -235,3 +235,13 @@ exercises.c:36:1: error: expected expression before ‘}’ token
       | ^
 Compilation failed
 d3f343b
+Thu 14 Mar 2024 08:47:19 PM UTC: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘reverseArray’:
+exercises.c:37:1: error: expected expression before ‘}’ token
+   37 | }
+      | ^
+Compilation failed
+aa8de8f
