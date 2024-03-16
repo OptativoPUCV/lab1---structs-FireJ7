@@ -82,26 +82,32 @@ Descripción: Escribe una función que tome un arreglo y su tamaño,
 y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
   0 si no está ordenado, y -1 si está ordenado en orden descendente.
 */
-int checkOrden(int arr[], int size) {
-int asc = 1; // Variable para rastrear si está ordenado de forma ascendente
-int desc = 1; // Variable para rastrear si está ordenado de forma descendente
 
-// Verifica si el arreglo está ordenado de forma ascendente
-for(int i = 0; i < size - 1; i++) {
-    if(arr[i] > arr[i+1]) {
-        asc = 0; // No está ordenado de forma ascendente
-        break;
+int checkSorted(int arr[], int size) 
+{
+  int ascendente = 1;
+  int descendente = -1;
+
+  int *newArr = (int*)malloc(size * sizeof(int));
+
+  for(int i = 0; i < size -1;i++)
+    {
+      if (arr[i] > arr[i+1])
+      {
+        ascendente = 0;
+      }
     }
-}
 
-// Verifica si el arreglo está ordenado de forma descendente
-for(int i = 0; i < size - 1; i++) {
-    if(arr[i] < arr[i+1]) {
-        desc = 0; // No está ordenado de forma descendente
-        break;
+  for(int i = 0; i < size -1;i++)
+  {
+    if (arr[i] < arr[i+1])
+    {
+      descendente = 0;
     }
+  }
+  free(newArr);
 }
-
+  
 /*
 Ejercicio 6: Información de una Biblioteca
 Descripción: Vamos a representar la información de una biblioteca. En la

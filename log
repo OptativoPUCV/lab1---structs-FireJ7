@@ -397,3 +397,20 @@ test.c:47:6: error: ‘readIntArray’ defined but not used [-Werror=unused-func
 cc1: all warnings being treated as errors
 Compilation failed
 58e7ceb
+Sat 16 Mar 2024 09:17:18 PM UTC: 
+ exercises.c | 34 ++++++++++++++++++++--------------
+ 1 file changed, 20 insertions(+), 14 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:89:7: error: variable ‘descendente’ set but not used [-Werror=unused-but-set-variable]
+   89 |   int descendente = -1;
+      |       ^~~~~~~~~~~
+exercises.c:88:7: error: variable ‘ascendente’ set but not used [-Werror=unused-but-set-variable]
+   88 |   int ascendente = 1;
+      |       ^~~~~~~~~~
+exercises.c:109:1: error: control reaches end of non-void function [-Werror=return-type]
+  109 | }
+      | ^
+cc1: all warnings being treated as errors
+Compilation failed
+ec0d11c
