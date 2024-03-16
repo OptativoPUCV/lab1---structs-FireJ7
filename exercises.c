@@ -82,21 +82,14 @@ Descripción: Escribe una función que tome un arreglo y su tamaño,
 y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
   0 si no está ordenado, y -1 si está ordenado en orden descendente.
 */
-int checkSorted(int arr[], int size) 
-{
-  int *newArr = (int*)malloc(size * sizeof(int));
+int checkSorted(int arr[], int size) {
+    // No es necesario asignar memoria aquí, se puede eliminar esta línea
     for(int i = 0; i < size - 1; i++) {
         if(arr[i] > arr[i+1]) {
-            return 1; // No está ordenado
+            return -1; // No está ordenado
         }
     }
-  if (newArr == NULL)
-  {
-    // Handle memory allocation error
-    return -1;
-  }
-  free(newArr); // Don't forget to free allocated memory
-
+    return 1; // Está ordenado
 }
 
 /*
