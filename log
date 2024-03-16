@@ -315,3 +315,9 @@ exercises.c:87:7: error: unused variable ‘ascendente’ [-Werror=unused-variab
 cc1: all warnings being treated as errors
 Compilation failed
 2fdfa84
+Sat 16 Mar 2024 09:06:06 PM UTC: 
+ exercises.c | 2 --
+ 1 file changed, 2 deletions(-)
+ tests:  0|3
+total_score: 40/70
+ca27b13
