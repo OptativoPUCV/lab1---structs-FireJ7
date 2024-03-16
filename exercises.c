@@ -88,24 +88,34 @@ int checkSorted(int arr[], int size)
   int ascendente = 1;
   int descendente = -1;
 
-  int *newArr = (int*)malloc(size * sizeof(int));
-
-  for(int i = 0; i < size -1;i++)
+  int noOrdenado = 0;
+  for (int i = 0; i < size -1;i++)
     {
       if (arr[i] > arr[i+1])
       {
         ascendente = 0;
       }
     }
-
-  for(int i = 0; i < size -1;i++)
-  {
-    if (arr[i] < arr[i+1])
+  for (int i = 0; i < size -1;i++)
     {
-      descendente = 0;
+      if (arr[i] > arr[i+1])
+      {
+        descendente = 0;
+      }
+    }
+  if (ascendente ==1)
+  {
+    return 1;
+  }
+  else
+  {
+    if (descendente == 1)
+    {
+      return -1;
     }
   }
-  free(newArr);
+  return noOrdenado;
+    
 }
   
 /*
