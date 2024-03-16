@@ -86,7 +86,7 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 int checkSorted(int arr[], int size) 
 {
   int ascendente = 1;
-  int descendente = -1;
+  int descendente = 1;  // Cambiado a 1 para indicar potencial orden descendente
   int noOrdenado = 0;
 
   for (int i = 0; i < size - 1; i++)
@@ -99,7 +99,7 @@ int checkSorted(int arr[], int size)
 
   for (int i = 0; i < size - 1; i++)
   {
-    if (arr[i] < arr[i + 1])  // Corrected condition for descending order check
+    if (arr[i] < arr[i + 1])  
     {
       descendente = 0;
     }
@@ -109,7 +109,7 @@ int checkSorted(int arr[], int size)
   {
     return 1;
   }
-  else if (descendente == 1)
+  else if (descendente == 1)  // Cambiado a verificar si descendente es 1
   {
     return -1;
   }
