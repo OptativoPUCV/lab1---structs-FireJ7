@@ -86,13 +86,13 @@ int checkSorted(int arr[], int size)
 {
   int *newArr = (int*)malloc(size * sizeof(int));
 
-  for(int i = 1; i < size; i++)
+  for(int i = 1; i < size-1; i++)
     if(arr[i] < arr[i+1])
-      return 1;
+      return -1;
   
   free(newArr); // Don't forget to free allocated memory
 
-  return -1; 
+  return 1; 
 }
 
 /*
