@@ -301,3 +301,17 @@ exercises.c:87:7: error: unused variable ‘ascendente’ [-Werror=unused-variab
 cc1: all warnings being treated as errors
 Compilation failed
 f438b8a
+Sat 16 Mar 2024 09:05:55 PM UTC: 
+ exercises.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:88:7: error: unused variable ‘descendente’ [-Werror=unused-variable]
+   88 |   int descendente = 1;
+      |       ^~~~~~~~~~~
+exercises.c:87:7: error: unused variable ‘ascendente’ [-Werror=unused-variable]
+   87 |   int ascendente = 1;
+      |       ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2fdfa84
