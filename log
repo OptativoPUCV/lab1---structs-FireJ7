@@ -287,3 +287,17 @@ Sat 16 Mar 2024 08:34:01 PM UTC:
  tests:  0|3
 total_score: 40/70
 e0a97b8
+Sat 16 Mar 2024 08:40:31 PM UTC: 
+ exercises.c | 15 ++++++++++++++-
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:88:7: error: unused variable ‘descendente’ [-Werror=unused-variable]
+   88 |   int descendente = 1;
+      |       ^~~~~~~~~~~
+exercises.c:87:7: error: unused variable ‘ascendente’ [-Werror=unused-variable]
+   87 |   int ascendente = 1;
+      |       ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+f438b8a

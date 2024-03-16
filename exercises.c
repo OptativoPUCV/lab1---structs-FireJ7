@@ -82,7 +82,20 @@ Descripción: Escribe una función que tome un arreglo y su tamaño,
 y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
   0 si no está ordenado, y -1 si está ordenado en orden descendente.
 */
-int checkSorted(int arr[], int size) { return -2; }
+int checkSorted(int arr[], int size) 
+{
+  int ascendente = 1;
+  int descendente = 1;
+  int *newArr = (int*)malloc(size * sizeof(int));
+
+  if (newArr == NULL) {
+    // Handle memory allocation error
+    return -1;
+  }
+  free(newArr); // Don't forget to free allocated memory
+
+  return 1; 
+}
 
 /*
 Ejercicio 6: Información de una Biblioteca
@@ -109,7 +122,6 @@ void inicializarLibro(Libro *libro, const char *titulo, const char *nombreAutor,
   strcpy(libro->titulo, titulo);
   strcpy(libro->autor.nombre, nombreAutor);
   libro->autor.anioNacimiento = anioNacimiento;
-  
 }
 
 /*
