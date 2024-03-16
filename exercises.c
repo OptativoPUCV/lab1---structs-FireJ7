@@ -97,7 +97,6 @@ int checkSorted(int arr[], int size)
   }
   free(newArr); // Don't forget to free allocated memory
 
-  return 1; 
 }
 
 /*
