@@ -86,8 +86,8 @@ y luego devuelva 1 si el arreglo está ordenado en orden ascendente,
 int checkSorted(int arr[], int size) 
 {
   int ascendente = 1;
-  int descendente = 1;  // Cambiado a 1 para indicar potencial orden descendente
-  int noOrdenado = 0;
+  int descendente = 1;  
+  int ninguno = 0;
 
   for (int i = 0; i < size - 1; i++)
   {
@@ -109,12 +109,12 @@ int checkSorted(int arr[], int size)
   {
     return 1;
   }
-  else if (descendente == 1)  // Cambiado a verificar si descendente es 1
+  else if (descendente == 1)  
   {
     return -1;
   }
 
-  return noOrdenado;
+  return ninguno;
 }
 /*
 Ejercicio 6: Información de una Biblioteca
@@ -160,4 +160,20 @@ typedef struct nodo {
   struct nodo *siguiente; // puntero al siguiente nodo
 } Nodo;
 
-Nodo *crearListaEnlazada(int arr[], int size) { return NULL; }
+Nodo *crearListaEnlazada(int arr[], int size) 
+{
+  Nodo *cabeza = NULL;
+  Nodo *ultimo = NULL;
+  for (int i = 0; i < size; i++)
+    {
+      Nodo *nuevoNodo = (Nodo *)malloc(sizeof(Nodo));
+      nuevoNodo->numero = arr[i];
+      nuevoNodo->siguiente = NULL;
+      if (cabeza == NULL)
+      {
+        cabeza = nuevoNodo;
+        ultimo = nuevoNodo;
+      }
+    }
+  return cabeza;
+}
