@@ -73,7 +73,6 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[
 {
     int arre1 = 0, arre2 = 0, arre3 = 0;
 
-    // Fusionar los arreglos mientras ambos tengan elementos
     while (arre1 < size1 && arre2 < size2) 
     {
         if (arr1[arre1] < arr2[arre2]) 
@@ -86,13 +85,11 @@ void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2, int result[
         }
     }
 
-    // Copiar los elementos restantes de arr1 (si hay alguno)
     while (arre1 < size1) 
     {
         result[arre3++] = arr1[arre1++];
     }
 
-    // Copiar los elementos restantes de arr2 (si hay alguno)
     while (arre2 < size2) 
     {
         result[arre3++] = arr2[arre2++];
